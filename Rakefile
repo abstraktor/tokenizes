@@ -7,6 +7,11 @@ end
 
 gemspec = eval(File.read(Dir["*.gemspec"].first))
 
+desc "Git commit all"
+task :commit do
+  system "git add -A"
+  system "git commit"
+end
 
 desc "Validate the gemspec"
 task :gemspec do
@@ -14,7 +19,7 @@ task :gemspec do
 end
 
 desc "Build gem locally"
-task :build => :gemspec do
+task :build => [:commit, :gemspec] do
   system "gem build #{gemspec.name}.gemspec"
   FileUtils.mkdir_p "pkg"
   FileUtils.mv "#{gemspec.name}-#{gemspec.version}.gem", "pkg"
