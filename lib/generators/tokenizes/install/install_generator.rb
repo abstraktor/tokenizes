@@ -2,7 +2,7 @@ require 'rails'
 
 module Tokenizes
   module Generators
-    class InstallGenerator < ::Rails::Generator::Base
+    class InstallGenerator < ::Rails::Generators::Base
       desc "This generator installs token-input*.css, tokenizes-ujs and jquery.tokeninput"
       source_root File.expand_path('../../../../../vendor/assets/javascripts', __FILE__)
 
@@ -22,6 +22,7 @@ module Tokenizes
 	copy_file "token-input.css", "public/stylesheets/token-input.css"
 	copy_file "token-input-facebook.css", "public/stylesheets/token-input-facebook.css"
 	copy_file "token-input-mac.css", "public/stylesheets/token-input-mac.css"
+      end
     end
   end
 end
