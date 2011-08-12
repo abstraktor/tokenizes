@@ -8,7 +8,7 @@ module Tokenizes
 
       def copy_js
 	      copy_file "javascripts/jquery.tokeninput.js", "public/javascripts/jquery.tokeninput.js"
-	      copy_file "javascripts/jquery.js", "public/javascripts/jquery.js"
+	      copy_file "javascripts/jquery.min.js", "public/javascripts/jquery.min.js"
 	      copy_file "javascripts/tokenizes-ujs.js", "public/javascripts/tokenizes-ujs.js"
       end
 
