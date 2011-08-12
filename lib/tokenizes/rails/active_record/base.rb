@@ -33,7 +33,7 @@ module Tokenizes
 	     self.send("#{key}_id=", new_value.to_i)
 	     save
 	    end
-	   end if not method_defined? :"#{key}_tokens"
+	   end if not method_defined? :"#{key}_tokens="
 
 	  end
     end
