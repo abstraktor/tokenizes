@@ -5,7 +5,7 @@ module Tokenizes
 
     class Railtie < ::Rails::Railtie
       config.before_configuration do
-	      config.action_view.javascript_expansions[:defaults] += ['jquery.tokeninput.js','tokenizes-ujs']
+	      config.action_view.javascript_expansions[:defaults] += ['jquery.js','jquery.tokeninput.js','tokenizes-ujs']
       end
     end
 
