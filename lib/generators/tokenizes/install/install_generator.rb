@@ -6,22 +6,17 @@ module Tokenizes
       desc "This generator installs token-input*.css, tokenizes-ujs and jquery.tokeninput"
       source_root File.expand_path('../../../../../vendor/assets', __FILE__)
 
-      def copy_tokeninput
-	say_status("remember to run rails g jquery:install or install jquery manually!", "")
-        say_status("copying", "jquery.tokeninput", :green)
-	copy_file "javascripts/jquery.tokeninput.js", "public/javascripts/jquery.tokeninput.js"
-      end
-
-      def copy_tokenizes
-        say_status("copying", "tokenizes-ujs", :green)
-	copy_file "javascripts/tokenizes-ujs.js", "public/javascripts/tokenizes-ujs.js"
+      def copy_js
+	      copy_file "javascripts/jquery.tokeninput.js", "public/javascripts/jquery.tokeninput.js"
+	      copy_file "javascripts/jquery.js", "public/javascripts/jquery.js"
+	      copy_file "javascripts/tokenizes-ujs.js", "public/javascripts/tokenizes-ujs.js"
       end
 
       def copy_stylesheets
         say_status("copying", "token-input-*.css", :green)
-	copy_file "stylesheets/token-input.css", "public/stylesheets/token-input.css"
-	copy_file "stylesheets/token-input-facebook.css", "public/stylesheets/token-input-facebook.css"
-	copy_file "stylesheets/token-input-mac.css", "public/stylesheets/token-input-mac.css"
+	      copy_file "stylesheets/token-input.css", "public/stylesheets/token-input.css"
+	      copy_file "stylesheets/token-input-facebook.css", "public/stylesheets/token-input-facebook.css"
+	      copy_file "stylesheets/token-input-mac.css", "public/stylesheets/token-input-mac.css"
       end
     end
   end

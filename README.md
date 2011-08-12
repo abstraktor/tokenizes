@@ -7,7 +7,6 @@ This rails-gem helps to use jquery.tokeninput with active-record.
 ### Installation
 1. require 'tokenizes' in your gemfile
 2. run 'rails g tokenizes:install' to install the tokenizes javascripts and stylesheets
-3. run 'rails g jquery:install' or install jquery manually
 
 ### the Model
 Go to the model that tokenizes a relation and call 'tokenizes relation' where relation is the name of the relation you want to tokenize
@@ -30,6 +29,6 @@ In your views you can call tokenize_tag(element, relation, pre=nil) of the Appli
 
 As tokenizes optimizes the work with active record, you won't be able to use another ORM.
 
-Are you sure, you have installed jquery?
+There are problems with conflicting jquery versions...any ideas?
 
 Copyright (c) 2011 Bastian Kruck, released under the MIT license
