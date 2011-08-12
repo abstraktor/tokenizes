@@ -7,7 +7,7 @@ module Tokenizes
       source_root File.expand_path('../../../../../vendor/assets', __FILE__)
 
       def copy_tokeninput
-	say_status("remember to run rails g jquery:install or install jquery manually!", :yellow)
+	say_status("remember to run rails g jquery:install or install jquery manually!", "")
         say_status("copying", "jquery.tokeninput", :green)
 	copy_file "javascripts/jquery.tokeninput.js", "public/javascripts/jquery.tokeninput.js"
       end
