@@ -1,4 +1,4 @@
-# ar-tokenizes
+# tokenizes
 
 This rails-gem helps to use jquery.tokeninput with active-record.
 
